@@ -1,91 +1,162 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Humaira Communications - ISP Service</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <style>
-    .package-card:hover {
-      transform: scale(1.03);
-    }
-    .feature-icon {
-      background: linear-gradient(135deg, #1a56db 0%, #3182ce 100%);
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>আমাদের পরিষেবা - Humaira Communication (উদাহরণ)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f8f8f8; /* হালকা ধূসর ব্যাকগ্রাউন্ড */
+        }
+        /* কাস্টম স্কলবার স্টাইল */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
 </head>
-<body class="bg-gray-50">
-  <!-- Navigation -->
-  <nav class="bg-white py-4 px-6 shadow-md">
-    <div class="container mx-auto flex justify-between items-center">
-      <div class="flex items-center">
-         <img src="logo.png" alt="Humaira Logo" class="h-12">
-        <span class="text-2xl font-bold text-blue-700">Humaira Communications</span>
-      </div>
-    </div>
-  </nav>
+<body class="antialiased text-gray-800">
 
-  <!-- Hero Section -->
-  <section class="bg-gradient-to-r from-blue-700 to-blue-500 text-white py-20">
-    <div class="container mx-auto px-6 text-center">
-      <h1 class="text-4xl md:text-5xl font-bold mb-6">সবার জন্য নির্ভরযোগ্য ইন্টারনেট</h1>
-      <p class="text-lg mb-8">২৪/৭ টেক সাপোর্ট, শেয়ার ও ডেডিকেটেড IP সহ দ্রুতগতির সংযোগ</p>
-      <a href="#order" class="bg-white text-blue-700 py-3 px-6 rounded-full font-semibold hover:bg-gray-200 transition-colors">অর্ডার করুন</a>
-    </div>
-  </section>
-  <a href="packages.html" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-800">See All Packages</a>
+    <nav class="bg-white shadow-md py-4 px-6 md:px-10 sticky top-0 z-50 rounded-b-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-blue-600 rounded-lg p-2 hover:text-blue-700 transition duration-300">HCISP</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#home" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300 rounded-md px-3 py-2">হোম</a>
+                <a href="#services" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300 rounded-md px-3 py-2">পরিষেবা</a>
+                <a href="#about" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300 rounded-md px-3 py-2">আমাদের সম্পর্কে</a>
+                <a href="#contact" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300 rounded-md px-3 py-2">যোগাযোগ</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                <svg class="w-7 h-7 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-3 bg-white border-t border-gray-200 py-3 rounded-b-lg">
+            <a href="#home" class="block text-gray-700 hover:text-blue-600 font-medium px-4 py-2 transition duration-300">হোম</a>
+            <a href="#services" class="block text-gray-700 hover:text-blue-600 font-medium px-4 py-2 transition duration-300">পরিষেবা</a>
+            <a href="#about" class="block text-gray-700 hover:text-blue-600 font-medium px-4 py-2 transition duration-300">আমাদের সম্পর্কে</a>
+            <a href="#contact" class="block text-gray-700 hover:text-blue-600 font-medium px-4 py-2 transition duration-300">যোগাযোগ</a>
+        </div>
+    </nav>
 
-  <!-- Features Section -->
-  <section id="features" class="py-16 bg-white">
-    <div class="container mx-auto px-6 text-center">
-      <h2 class="text-3xl font-bold text-gray-800 mb-4">আমাদের বৈশিষ্ট্য</h2>
-      <p class="text-gray-600 max-w-2xl mx-auto mb-12">শেয়ার ও ডেডিকেটেড IP, বাফারলেস ভিডিও, ও বিশ্বস্ততার সাথে ইন্টারনেট সেবা।</p>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-blue-50 p-6 rounded-lg shadow hover:shadow-lg">
-          <h3 class="text-xl font-semibold mb-2">২৪/৭ টেক সাপোর্ট</h3>
-          <p class="text-gray-600">যেকোনো সময় টেকনিক্যাল সহায়তা।</p>
+    <section id="home" class="relative bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20 md:py-32 rounded-b-2xl shadow-xl">
+        <div class="container mx-auto text-center px-4">
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6 animate-fade-in-down">আপনার বিশ্বস্ত ইন্টারনেট পরিষেবা প্রদানকারী</h1>
+            <p class="text-lg md:text-xl mb-10 max-w-2xl mx-auto opacity-90 animate-fade-in-up">তীব্র গতি, নির্ভরযোগ্য সংযোগ, এবং সেরা গ্রাহক পরিষেবা নিয়ে আমরা আপনার পাশে আছি।</p>
+            <a href="#services" class="inline-block bg-white text-blue-600 hover:bg-blue-50 hover:text-blue-700 transition duration-300 py-3 px-8 rounded-full shadow-lg font-semibold text-lg transform hover:scale-105">আমাদের প্যাকেজগুলো দেখুন</a>
         </div>
-        <div class="bg-blue-50 p-6 rounded-lg shadow hover:shadow-lg">
-          <h3 class="text-xl font-semibold mb-2">শেয়ার ও ডেডিকেটেড IP</h3>
-          <p class="text-gray-600">সাশ্রয়ী মূল্যে ১০০% নিশ্চয়তা সহ সংযোগ।</p>
-        </div>
-        <div class="bg-blue-50 p-6 rounded-lg shadow hover:shadow-lg">
-          <h3 class="text-xl font-semibold mb-2">বাফারলেস ভিডিও</h3>
-          <p class="text-gray-600">ইউটিউব ও ফেসবুক চলবে ঝামেলাহীনভাবে।</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Order Section -->
-  <section id="order" class="py-16 bg-blue-50">
-    <div class="container mx-auto px-6 text-center">
-      <h2 class="text-3xl font-bold text-gray-800 mb-6">প্যাকেজ অর্ডার করুন</h2>
-      <p class="text-gray-600 mb-8">আপনার নাম্বার ও ঠিকানা দিয়ে ফর্ম পূরণ করুন, আমাদের টিম আপনাকে দ্রুত যোগাযোগ করবে।</p>
-      <form class="max-w-xl mx-auto bg-white p-6 rounded-lg shadow-md">
-        <div class="mb-4 text-left">
-          <label class="block text-gray-700">নাম</label>
-          <input type="text" placeholder="আপনার নাম" class="w-full mt-1 p-2 border rounded">
+    <section id="services" class="py-16 md:py-24 bg-gray-50 rounded-lg shadow-inner mx-4 my-8 md:mx-auto max-w-6xl">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">আমাদের প্রধান পরিষেবাগুলো</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-transform transform hover:-translate-y-2">
+                    <div class="text-blue-600 mb-4 text-5xl flex justify-center items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-zap"><path d="M4 14a1 1 0 0 1-.78-1.63L16.38 3m0 0L21 8.62m-5.62-5.62L10 10l-4 4l-3 3l-2 2h17l-3-3m-3-3v-2l-3-3-2-2z"/></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center mb-4 text-gray-800">তীব্র গতির ব্রডব্যান্ড</h3>
+                    <p class="text-gray-600 text-center">দ্রুততম ইন্টারনেট সংযোগের সাথে অনলাইন গেমিং, স্ট্রিমিং এবং ডাউনলোডের অভিজ্ঞতা নিন।</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-transform transform hover:-translate-y-2">
+                    <div class="text-green-600 mb-4 text-5xl flex justify-center items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-wifi"><path d="M12 18h.01"/><path d="M2 8.82a15 15 0 0 1 20 0"/><path d="M5 12.65a9 9 0 0 1 14 0"/><path d="M8 16.47a3 3 0 0 1 6 0"/></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center mb-4 text-gray-800">নির্ভরযোগ্য ওয়াইফাই</h3>
+                    <p class="text-gray-600 text-center">আপনার বাড়ির প্রতিটি কোণে শক্তিশালী এবং স্থিতিশীল ওয়াইফাই সিগন্যাল উপভোগ করুন।</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-transform transform hover:-translate-y-2">
+                    <div class="text-purple-600 mb-4 text-5xl flex justify-center items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-life-buoy"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m9.17 14.83-4.24 4.24"/><path d="m19.07 19.07-4.24-4.24"/><path d="M12 12v.01"/></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center mb-4 text-gray-800">২৪/৭ গ্রাহক সহায়তা</h3>
+                    <p class="text-gray-600 text-center">যেকোনো প্রশ্ন বা সমস্যার জন্য আমাদের অভিজ্ঞ দল সর্বদা আপনার পাশে আছে।</p>
+                </div>
+            </div>
         </div>
-        <div class="mb-4 text-left">
-          <label class="block text-gray-700">মোবাইল নাম্বার</label>
-          <input type="text" placeholder="01XXXXXXXXX" class="w-full mt-1 p-2 border rounded">
-        </div>
-        <div class="mb-4 text-left">
-          <label class="block text-gray-700">ঠিকানা</label>
-          <textarea placeholder="আপনার ঠিকানা" class="w-full mt-1 p-2 border rounded"></textarea>
-        </div>
-        <button type="submit" class="bg-blue-700 text-white py-2 px-4 rounded hover:bg-blue-800 transition-colors">সাবমিট করুন</button>
-      </form>
-    </div>
-  </section>
+    </section>
 
-  <!-- Footer -->
-  <footer class="bg-gray-800 text-white py-6">
-    <div class="container mx-auto px-6 text-center">
-      <p>&copy; 2025 Humaira Communications. All rights reserved.</p>
-    </div>
-  </footer>
+    <section id="about" class="py-16 md:py-24 bg-white rounded-lg shadow-inner mx-4 my-8 md:mx-auto max-w-6xl">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-10">
+            <div class="md:w-1/2">
+                <img src="images/about-us.jpg" alt="আমাদের সম্পর্কে ছবি" class="rounded-xl shadow-lg w-full h-auto object-cover border border-gray-200">
+            </div>
+            <div class="md:w-1/2">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">আমাদের সম্পর্কে</h2>
+                <p class="text-gray-700 leading-relaxed mb-4">HCISP বিগত ১০ বছর ধরে বাংলাদেশে নির্ভরযোগ্য ইন্টারনেট পরিষেবা প্রদান করে আসছে। আমরা গ্রাহকদের চাহিদা পূরণে বদ্ধপরিকর এবং প্রযুক্তির অগ্রগতির সাথে তাল মিলিয়ে আমাদের পরিষেবা উন্নত করে যাচ্ছি।</p>
+                <p class="text-gray-700 leading-relaxed">আমাদের লক্ষ্য হলো সাশ্রয়ী মূল্যে উচ্চ-মানের ইন্টারনেট সংযোগ সরবরাহ করা, যাতে প্রতিটি বাসা ও ব্যবসা ডিজিটালাইজেশনের সুবিধা উপভোগ করতে পারে।</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 md:py-24 bg-gray-50 rounded-lg shadow-inner mx-4 my-8 md:mx-auto max-w-6xl">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">আমাদের সাথে যোগাযোগ করুন</h2>
+            <div class="max-w-md mx-auto bg-white p-8 rounded-xl shadow-lg border border-gray-200">
+                <form class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700 mb-1">আপনার নাম</label>
+                        <input type="text" id="name" name="name" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm" placeholder="আপনার পুরো নাম লিখুন" required>
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">ইমেইল ঠিকানা</label>
+                        <input type="email" id="email" name="email" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm" placeholder="আপনার ইমেইল লিখুন" required>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700 mb-1">আপনার বার্তা</label>
+                        <textarea id="message" name="message" rows="5" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm" placeholder="আপনি কি জানতে চান?" required></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-blue-600 text-white py-3 px-6 rounded-md font-semibold text-lg hover:bg-blue-700 transition duration-300 transform hover:scale-105 shadow-md">বার্তা পাঠান</button>
+                </form>
+            </div>
+            <div class="text-center mt-10 text-gray-700">
+                <p>আমাদের অফিস: ঢাকা, বাংলাদেশ</p>
+                <p>ফোন: +880 1XXXXXXXXX</p>
+                <p>ইমেইল: info@hcisp.com</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-8 rounded-t-lg">
+        <div class="container mx-auto text-center px-4">
+            <p>&copy; 2025 HCISP। সর্বস্বত্ব সংরক্ষিত।</p>
+            <div class="flex justify-center space-x-4 mt-4">
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300">ফেসবুক</a>
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300">টুইটার</a>
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300">লিঙ্কডইন</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // মোবাইল মেনু টগল ফাংশনালিটি
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // যখন মেনু লিঙ্ক ক্লিক করা হয় তখন মেনু বন্ধ করুন (মোবাইলে)
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
 </body>
 </html>
