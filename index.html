@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Humaira Communications - ISP Service</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .package-card:hover {
+      transform: scale(1.03);
+    }
+    .feature-icon {
+      background: linear-gradient(135deg, #1a56db 0%, #3182ce 100%);
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+  <!-- Navigation -->
+  <nav class="bg-white py-4 px-6 shadow-md">
+    <div class="container mx-auto flex justify-between items-center">
+      <div class="flex items-center">
+         <img src="logo.png" alt="Humaira Logo" class="h-12">
+        <span class="text-2xl font-bold text-blue-700">Humaira Communications</span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-r from-blue-700 to-blue-500 text-white py-20">
+    <div class="container mx-auto px-6 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6">সবার জন্য নির্ভরযোগ্য ইন্টারনেট</h1>
+      <p class="text-lg mb-8">২৪/৭ টেক সাপোর্ট, শেয়ার ও ডেডিকেটেড IP সহ দ্রুতগতির সংযোগ</p>
+      <a href="#order" class="bg-white text-blue-700 py-3 px-6 rounded-full font-semibold hover:bg-gray-200 transition-colors">অর্ডার করুন</a>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="py-16 bg-white">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold text-gray-800 mb-4">আমাদের বৈশিষ্ট্য</h2>
+      <p class="text-gray-600 max-w-2xl mx-auto mb-12">শেয়ার ও ডেডিকেটেড IP, বাফারলেস ভিডিও, ও বিশ্বস্ততার সাথে ইন্টারনেট সেবা।</p>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-blue-50 p-6 rounded-lg shadow hover:shadow-lg">
+          <h3 class="text-xl font-semibold mb-2">২৪/৭ টেক সাপোর্ট</h3>
+          <p class="text-gray-600">যেকোনো সময় টেকনিক্যাল সহায়তা।</p>
+        </div>
+        <div class="bg-blue-50 p-6 rounded-lg shadow hover:shadow-lg">
+          <h3 class="text-xl font-semibold mb-2">শেয়ার ও ডেডিকেটেড IP</h3>
+          <p class="text-gray-600">সাশ্রয়ী মূল্যে ১০০% নিশ্চয়তা সহ সংযোগ।</p>
+        </div>
+        <div class="bg-blue-50 p-6 rounded-lg shadow hover:shadow-lg">
+          <h3 class="text-xl font-semibold mb-2">বাফারলেস ভিডিও</h3>
+          <p class="text-gray-600">ইউটিউব ও ফেসবুক চলবে ঝামেলাহীনভাবে।</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Order Section -->
+  <section id="order" class="py-16 bg-blue-50">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold text-gray-800 mb-6">প্যাকেজ অর্ডার করুন</h2>
+      <p class="text-gray-600 mb-8">আপনার নাম্বার ও ঠিকানা দিয়ে ফর্ম পূরণ করুন, আমাদের টিম আপনাকে দ্রুত যোগাযোগ করবে।</p>
+      <form class="max-w-xl mx-auto bg-white p-6 rounded-lg shadow-md">
+        <div class="mb-4 text-left">
+          <label class="block text-gray-700">নাম</label>
+          <input type="text" placeholder="আপনার নাম" class="w-full mt-1 p-2 border rounded">
+        </div>
+        <div class="mb-4 text-left">
+          <label class="block text-gray-700">মোবাইল নাম্বার</label>
+          <input type="text" placeholder="01XXXXXXXXX" class="w-full mt-1 p-2 border rounded">
+        </div>
+        <div class="mb-4 text-left">
+          <label class="block text-gray-700">ঠিকানা</label>
+          <textarea placeholder="আপনার ঠিকানা" class="w-full mt-1 p-2 border rounded"></textarea>
+        </div>
+        <button type="submit" class="bg-blue-700 text-white py-2 px-4 rounded hover:bg-blue-800 transition-colors">সাবমিট করুন</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-6">
+    <div class="container mx-auto px-6 text-center">
+      <p>&copy; 2025 Humaira Communications. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
