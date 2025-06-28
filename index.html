@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>আমাদের পরিষেবা - Humaira Communication (উদাহরণ)</title>
+    <title>আমাদের পরিষেবা - Humaira Communications</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -28,13 +28,30 @@
         ::-webkit-scrollbar-thumb:hover {
             background: #555;
         }
+
+        /* নতুন অ্যানিমেশন: বাতাসে ভেসে থাকা */
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-12px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
     </style>
 </head>
 <body class="antialiased text-gray-800">
 
     <nav class="bg-white shadow-md py-4 px-6 md:px-10 sticky top-0 z-50 rounded-b-lg">
         <div class="container mx-auto flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-blue-600 rounded-lg p-2 hover:text-blue-700 transition duration-300">হুমাইরা কমিউনিকেশনস</a>
+            <a href="#" class="text-xl font-bold text-blue-600 rounded-lg p-2 hover:text-blue-700 transition duration-300">Humaira Communications</a>
             <div class="hidden md:flex space-x-6">
                 <a href="#home" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300 rounded-md px-3 py-2">হোম</a>
                 <a href="#services" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300 rounded-md px-3 py-2">পরিষেবা</a>
@@ -53,10 +70,10 @@
         </div>
     </nav>
 
-    <section id="home" class="relative bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20 md:py-32 rounded-b-2xl shadow-xl">
+    <section id="home" class="relative bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20 md:py-32 rounded-b-2xl shadow-xl overflow-hidden">
         <div class="container mx-auto text-center px-4">
-            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6 animate-fade-in-down">ইন্টারনেট হোক বাধাহীন সবার জন্য ইন্টারনেট</h1>
-            <p class="text-lg md:text-xl mb-10 max-w-2xl mx-auto opacity-90 animate-fade-in-up">তীব্র গতি, নির্ভরযোগ্য সংযোগ, এবং সেরা গ্রাহক পরিষেবা নিয়ে আমরা আপনার পাশে আছি।</p>
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6 animate-float">ইন্টারনেট হোক বাধাহীন সবার জন্য ইন্টারনেট</h1>
+            <p class="text-lg md:text-xl mb-10 max-w-2xl mx-auto opacity-90">তীব্র গতি, নির্ভরযোগ্য সংযোগ, এবং সেরা গ্রাহক পরিষেবা নিয়ে আমরা আপনার পাশে আছি।</p>
             <a href="#services" class="inline-block bg-white text-blue-600 hover:bg-blue-50 hover:text-blue-700 transition duration-300 py-3 px-8 rounded-full shadow-lg font-semibold text-lg transform hover:scale-105">আমাদের প্যাকেজগুলো দেখুন</a>
         </div>
     </section>
@@ -97,7 +114,7 @@
             </div>
             <div class="md:w-1/2">
                 <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">আমাদের সম্পর্কে</h2>
-                <p class="text-gray-700 leading-relaxed mb-4">হুমাইরা কমিউনিকেশনস বিগত ৭ বছর ধরে বাংলাদেশে নির্ভরযোগ্য ইন্টারনেট পরিষেবা প্রদান করে আসছে। আমরা গ্রাহকদের চাহিদা পূরণে বদ্ধপরিকর এবং প্রযুক্তির অগ্রগতির সাথে তাল মিলিয়ে আমাদের পরিষেবা উন্নত করে যাচ্ছি।</p>
+                <p class="text-gray-700 leading-relaxed mb-4">Humaira Communications বিগত ১০ বছর ধরে বাংলাদেশে নির্ভরযোগ্য ইন্টারনেট পরিষেবা প্রদান করে আসছে। আমরা গ্রাহকদের চাহিদা পূরণে বদ্ধপরিকর এবং প্রযুক্তির অগ্রগতির সাথে তাল মিলিয়ে আমাদের পরিষেবা উন্নত করে যাচ্ছি।</p>
                 <p class="text-gray-700 leading-relaxed">আমাদের লক্ষ্য হলো সাশ্রয়ী মূল্যে উচ্চ-মানের ইন্টারনেট সংযোগ সরবরাহ করা, যাতে প্রতিটি বাসা ও ব্যবসা ডিজিটালাইজেশনের সুবিধা উপভোগ করতে পারে।</p>
             </div>
         </div>
@@ -125,15 +142,15 @@
             </div>
             <div class="text-center mt-10 text-gray-700">
                 <p>আমাদের অফিস: ঢাকা, বাংলাদেশ</p>
-                <p>ফোন: +880 1712315059</p>
-                <p>ইমেইল: info@shubasisp.com</p>
+                <p>ফোন: +880 1XXXXXXXXX</p>
+                <p>ইমেইল: info@humairacommunications.com</p>
             </div>
         </div>
     </section>
 
     <footer class="bg-gray-800 text-white py-8 rounded-t-lg">
         <div class="container mx-auto text-center px-4">
-            <p>&copy; 2025 humaira Communications । সর্বস্বত্ব সংরক্ষিত।</p>
+            <p>&copy; 2025 Humaira Communications। সর্বস্বত্ব সংরক্ষিত।</p>
             <div class="flex justify-center space-x-4 mt-4">
                 <a href="#" class="text-gray-400 hover:text-white transition duration-300">ফেসবুক</a>
                 <a href="#" class="text-gray-400 hover:text-white transition duration-300">টুইটার</a>
