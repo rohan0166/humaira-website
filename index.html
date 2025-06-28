@@ -55,14 +55,199 @@
             <div class="hidden md:flex space-x-6">
                 <a href="#home" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300 rounded-md px-3 py-2">হোম</a>
                 <a href="#packages" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300 rounded-md px-3 py-2">প্যাকেজ</a>
+                <a href="#ftp" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300 rounded-md px-3 py-2">এফটিপি সার্ভার</a>
                 <a href="#about" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300 rounded-md px-3 py-2">আমাদের সম্পর্কে</a>
                 <a href="#contact" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300 rounded-md px-3 py-2">যোগাযোগ</a>
             </div>
             <button id="mobile-menu-button" class="md:hidden focus:outline-none">
-                <!-- মোবাইল মেনু বাটন (ভবিষ্যতের জন্য) -->
+                <svg class="w-7 h-7 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
             </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-3 bg-white border-t border-gray-200 py-3 rounded-b-lg">
+            <a href="#home" class="block text-gray-700 hover:text-blue-600 font-medium px-4 py-2 transition duration-300">হোম</a>
+            <a href="#packages" class="block text-gray-700 hover:text-blue-600 font-medium px-4 py-2 transition duration-300">প্যাকেজ</a>
+            <a href="#ftp" class="block text-gray-700 hover:text-blue-600 font-medium px-4 py-2 transition duration-300">এফটিপি সার্ভার</a>
+            <a href="#about" class="block text-gray-700 hover:text-blue-600 font-medium px-4 py-2 transition duration-300">আমাদের সম্পর্কে</a>
+            <a href="#contact" class="block text-gray-700 hover:text-blue-600 font-medium px-4 py-2 transition duration-300">যোগাযোগ</a>
         </div>
     </nav>
 
+    <section id="home" class="relative bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20 md:py-32 rounded-b-2xl shadow-xl overflow-hidden">
+        <div class="container mx-auto text-center px-4">
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6 animate-float">ইন্টারনেট হোক বাধাহীন সবার জন্য ইন্টারনেট</h1>
+            <p class="text-lg md:text-xl mb-10 max-w-2xl mx-auto opacity-90">তীব্র গতি, নির্ভরযোগ্য সংযোগ, এবং সেরা গ্রাহক পরিষেবা নিয়ে আমরা আপনার পাশে আছি।</p>
+            <a href="#packages" class="inline-block bg-white text-blue-600 hover:bg-blue-50 hover:text-blue-700 transition duration-300 py-3 px-8 rounded-full shadow-lg font-semibold text-lg transform hover:scale-105">আমাদের প্যাকেজগুলো দেখুন</a>
+        </div>
+    </section>
+    
+    <section id="packages" class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">সাশ্রয়ী ইন্টারনেট প্যাকেজ</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                
+                <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-transparent hover:border-gray-300 transition-all duration-300 flex flex-col">
+                    <h3 class="text-2xl font-semibold text-center mb-2 text-gray-800">স্টার্টার প্যাক</h3>
+                    <p class="text-center text-gray-500 mb-6">বাসা-বাড়ির জন্য</p>
+                    <p class="text-5xl font-bold text-center mb-4 text-blue-600">10<span class="text-2xl font-medium">Mbps</span></p>
+                    <p class="text-xl font-semibold text-center text-gray-700 mb-6">৫০০<span class="text-base font-normal"> টাকা/মাস</span></p>
+                    <ul class="space-y-3 text-gray-600 mb-8 flex-grow">
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>১০ Mbps গতি</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>শেয়ার IP</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>২৪/৭ কাস্টমার সাপোর্ট</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>বাফারহীন ভিডিও স্ট্রিমিং</li>
+                    </ul>
+                    <a href="#contact" class="mt-auto w-full bg-gray-200 text-gray-800 py-3 px-6 rounded-lg font-semibold text-center hover:bg-gray-300 transition duration-300">এই প্ল্যান নিন</a>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-2xl border-2 border-blue-600 relative transform scale-105 flex flex-col">
+                    <div class="absolute top-0 -translate-y-1/2 left-1/2 -translate-x-1/2">
+                        <span class="bg-blue-600 text-white text-sm font-semibold px-4 py-1 rounded-full uppercase">জনপ্রিয়</span>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-center mb-2 text-gray-800">ফ্যামিলি প্যাক</h3>
+                    <p class="text-center text-gray-500 mb-6">স্ট্রিমিং ও গেমিং এর জন্য</p>
+                    <p class="text-5xl font-bold text-center mb-4 text-blue-600">40<span class="text-2xl font-medium">Mbps</span></p>
+                    <p class="text-xl font-semibold text-center text-gray-700 mb-6">৮০০<span class="text-base font-normal"> টাকা/মাস</span></p>
+                    <ul class="space-y-3 text-gray-600 mb-8 flex-grow">
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>শেয়ার IP</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>২৪/৭ কাস্টমার সাপোর্ট</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>বাফারহীন ভিডিও স্ট্রিমিং</li>
+                    </ul>
+                    <a href="#contact" class="mt-auto w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold text-center hover:bg-blue-700 transition duration-300">এই প্ল্যান নিন</a>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-transparent hover:border-gray-300 transition-all duration-300 flex flex-col">
+                    <h3 class="text-2xl font-semibold text-center mb-2 text-gray-800">প্রো প্যাক</h3>
+                    <p class="text-center text-gray-500 mb-6">ব্যবসা বা অফিসের জন্য</p>
+                    <p class="text-5xl font-bold text-center mb-4 text-blue-600">75<span class="text-2xl font-medium">Mbps</span></p>
+                    <p class="text-xl font-semibold text-center text-gray-700 mb-6">১২০০<span class="text-base font-normal"> টাকা/মাস</span></p>
+                    <ul class="space-y-3 text-gray-600 mb-8 flex-grow">
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>শেয়ার IP</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>২৪/৭ কাস্টমার সাপোর্ট</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>বাফারহীন ভিডিও স্ট্রিমিং</li>
+                    </ul>
+                    <a href="#contact" class="mt-auto w-full bg-gray-200 text-gray-800 py-3 px-6 rounded-lg font-semibold text-center hover:bg-gray-300 transition duration-300">এই প্ল্যান নিন</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- নতুন FTP সার্ভার সেকশন -->
+    <section id="ftp" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">এফটিপি সার্ভার পরিষেবা</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                
+                <div class="bg-gray-50 p-8 rounded-xl shadow-lg border border-gray-200 hover:border-blue-500 transition-all duration-300">
+                    <div class="text-center mb-6">
+                        <svg class="w-16 h-16 mx-auto text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-center mb-4 text-gray-800">লাইভ সার্ভার</h3>
+                    <div class="bg-white p-4 rounded-lg border border-gray-200 text-center">
+                        <p class="text-lg font-mono text-blue-600">11plus.live</p>
+                    </div>
+                    <p class="text-gray-600 mt-4 text-center">আমাদের উচ্চ-গতির লাইভ স্ট্রিমিং সার্ভার। বাফারিং ছাড়াই HD কন্টেন্ট উপভোগ করুন।</p>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-xl shadow-lg border border-blue-500 relative transform scale-105">
+                    <div class="text-center mb-6">
+                        <svg class="w-16 h-16 mx-auto text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-center mb-4 text-gray-800">এফটিপি সার্ভার</h3>
+                    <div class="bg-white p-4 rounded-lg border border-gray-200 text-center">
+                        <p class="text-lg font-mono text-blue-600">11plus.live</p>
+                    </div>
+                    <p class="text-gray-600 mt-4 text-center">ফাইল ট্রান্সফার প্রোটোকল সার্ভার। নিরাপদে এবং দ্রুত ফাইল আপলোড ও ডাউনলোড করুন।</p>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-xl shadow-lg border border-gray-200 hover:border-blue-500 transition-all duration-300">
+                    <div class="text-center mb-6">
+                        <svg class="w-16 h-16 mx-auto text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-center mb-4 text-gray-800">মুভি সার্ভার</h3>
+                    <div class="bg-white p-4 rounded-lg border border-gray-200 text-center">
+                        <p class="text-lg font-mono text-blue-600">11plus.live</p>
+                    </div>
+                    <p class="text-gray-600 mt-4 text-center">বিশাল কালেকশনের মুভি ও টিভি শো। যেকোনো সময়, যেকোনো ডিভাইসে স্ট্রিম করুন।</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-10 max-w-6xl">
+            <div class="md:w-1/2">
+                <img src="images/about-us.jpg" alt="আমাদের সম্পর্কে ছবি" class="rounded-xl shadow-lg w-full h-auto object-cover border border-gray-200">
+            </div>
+            <div class="md:w-1/2">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">আমাদের সম্পর্কে</h2>
+                <p class="text-gray-700 leading-relaxed mb-4">Humaira Communications বিগত ১০ বছর ধরে বাংলাদেশে নির্ভরযোগ্য ইন্টারনেট পরিষেবা প্রদান করে আসছে। আমরা গ্রাহকদের চাহিদা পূরণে বদ্ধপরিকর এবং প্রযুক্তির অগ্রগতির সাথে তাল মিলিয়ে আমাদের পরিষেবা উন্নত করে যাচ্ছি।</p>
+                <p class="text-gray-700 leading-relaxed">আমাদের লক্ষ্য হলো সাশ্রয়ী মূল্যে উচ্চ-মানের ইন্টারনেট সংযোগ সরবরাহ করা, যাতে প্রতিটি বাসা ও ব্যবসা ডিজিটালাইজেশনের সুবিধা উপভোগ করতে পারে।</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">আমাদের সাথে যোগাযোগ করুন</h2>
+            <div class="max-w-md mx-auto bg-white p-8 rounded-xl shadow-lg border border-gray-200">
+                <form class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700 mb-1">আপনার নাম</label>
+                        <input type="text" id="name" name="name" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm" placeholder="আপনার পুরো নাম লিখুন" required>
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">ইমেইল ঠিকানা</label>
+                        <input type="email" id="email" name="email" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm" placeholder="আপনার ইমেইল লিখুন" required>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700 mb-1">আপনার বার্তা</label>
+                        <textarea id="message" name="message" rows="5" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm" placeholder="আপনি কি জানতে চান?" required></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-blue-600 text-white py-3 px-6 rounded-md font-semibold text-lg hover:bg-blue-700 transition duration-300 transform hover:scale-105 shadow-md">বার্তা পাঠান</button>
+                </form>
+            </div>
+            <div class="text-center mt-10 text-gray-700">
+                <p>আমাদের অফিস: ঢাকা, বাংলাদেশ</p>
+                <p>ফোন: +880 1XXXXXXXXX</p>
+                <p>ইমেইল: info@humairacommunications.com</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-8 rounded-t-lg">
+        <div class="container mx-auto text-center px-4">
+            <p>&copy; 2025 Humaira Communications। সর্বস্বত্ব সংরক্ষিত।</p>
+            <div class="flex justify-center space-x-4 mt-4">
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300">ফেসবুক</a>
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300">টুইটার</a>
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300">লিঙ্কডইন</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // মোবাইল মেনু টগল ফাংশনালিটি
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // যখন মেনু লিঙ্ক ক্লিক করা হয় তখন মেনু বন্ধ করুন (মোবাইলে)
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
 </body>
 </html>
