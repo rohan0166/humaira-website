@@ -5,107 +5,140 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Humaira Communications</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
   <style>
     body {
       margin: 0;
+      padding: 0;
       font-family: 'Inter', sans-serif;
       overflow-x: hidden;
-      background: linear-gradient(to bottom, #aee1f9, #ffffff);
-    }
-
-    .bird {
-      position: absolute;
-      width: 50px;
-      height: 50px;
-      background-image: url('https://cdn-icons-png.flaticon.com/512/616/616408.png');
-      background-size: contain;
-      background-repeat: no-repeat;
-      animation: fly 20s linear infinite;
-      pointer-events: none;
-    }
-
-    @keyframes fly {
-      0% {
-        transform: translateX(-100px) translateY(0);
-        opacity: 0.7;
-      }
-      50% {
-        transform: translateX(50vw) translateY(-50px);
-        opacity: 1;
-      }
-      100% {
-        transform: translateX(110vw) translateY(0);
-        opacity: 0.7;
-      }
     }
 
     .sky {
+      background: linear-gradient(to bottom, #87ceeb, #e0f7ff); /* হালকা নীল আকাশ */
       position: fixed;
-      top: 0;
-      left: 0;
       width: 100%;
       height: 100%;
       overflow: hidden;
       z-index: -1;
     }
+
+    .cloud {
+      position: absolute;
+      background: #fff;
+      border-radius: 50%;
+      opacity: 0.7;
+    }
+
+    .cloud::before,
+    .cloud::after {
+      content: '';
+      position: absolute;
+      background: #fff;
+      border-radius: 50%;
+    }
+
+    .cloud1 {
+      width: 120px;
+      height: 60px;
+      top: 50px;
+      left: -150px;
+      animation: cloudMove 60s linear infinite;
+    }
+
+    .cloud1::before {
+      width: 80px;
+      height: 80px;
+      top: -20px;
+      left: 30px;
+    }
+
+    .cloud1::after {
+      width: 60px;
+      height: 60px;
+      top: 10px;
+      left: 70px;
+    }
+
+    .cloud2 {
+      width: 100px;
+      height: 50px;
+      top: 150px;
+      left: -200px;
+      animation: cloudMove 90s linear infinite;
+    }
+
+    .cloud2::before {
+      width: 60px;
+      height: 60px;
+      top: -10px;
+      left: 20px;
+    }
+
+    .cloud2::after {
+      width: 40px;
+      height: 40px;
+      top: 10px;
+      left: 60px;
+    }
+
+    .cloud3 {
+      width: 140px;
+      height: 70px;
+      top: 250px;
+      left: -300px;
+      animation: cloudMove 80s linear infinite;
+    }
+
+    .cloud3::before {
+      width: 90px;
+      height: 90px;
+      top: -20px;
+      left: 40px;
+    }
+
+    .cloud3::after {
+      width: 70px;
+      height: 70px;
+      top: 10px;
+      left: 90px;
+    }
+
+    @keyframes cloudMove {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(150vw);
+      }
+    }
   </style>
 </head>
 <body class="relative text-gray-800">
 
-  <!-- আকাশ ও পাখি -->
-  <div class="sky" id="sky"></div>
+  <!-- আকাশ ও মেঘ -->
+  <div class="sky">
+    <div class="cloud cloud1"></div>
+    <div class="cloud cloud2"></div>
+    <div class="cloud cloud3"></div>
+  </div>
 
-  <!-- ন্যাভবার -->
-  <nav class="bg-white shadow-md py-4 px-6 md:px-10 sticky top-0 z-50 rounded-b-lg">
+  <!-- মূল কনটেন্ট -->
+  <nav class="bg-white shadow-md py-4 px-6 md:px-10 sticky top-0 z-10">
     <div class="container mx-auto flex justify-between items-center">
-      <a href="#" class="text-xl font-bold text-blue-600 rounded-lg p-2 hover:text-blue-700 transition duration-300">Humaira Communications</a>
+      <a href="#" class="text-xl font-bold text-blue-600 hover:text-blue-700 transition duration-300">Humaira Communications</a>
       <div class="hidden md:flex space-x-6">
-        <a href="#home" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300 rounded-md px-3 py-2">হোম</a>
-        <a href="#packages" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300 rounded-md px-3 py-2">প্যাকেজ</a>
-        <a href="#about" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300 rounded-md px-3 py-2">আমাদের সম্পর্কে</a>
-        <a href="#contact" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300 rounded-md px-3 py-2">যোগাযোগ</a>
+        <a href="#home" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300">হোম</a>
+        <a href="#packages" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300">প্যাকেজ</a>
+        <a href="#about" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300">আমাদের সম্পর্কে</a>
+        <a href="#contact" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300">যোগাযোগ</a>
       </div>
-      <button id="mobile-menu-button" class="md:hidden focus:outline-none">
-        <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" stroke-width="2"
-             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path stroke-linecap="round" stroke-linejoin="round"
-                d="M4 6h16M4 12h16M4 18h16"></path>
-        </svg>
-      </button>
     </div>
   </nav>
 
-  <!-- মূল কন্টেন্ট -->
-  <div class="mt-10 p-6">
-    <h1 class="text-3xl font-bold text-center">স্বাগতম Humaira Communications এ!</h1>
-    <p class="text-center text-gray-600 mt-4">আমরা দিচ্ছি নিরবচ্ছিন্ন ইন্টারনেট পরিষেবা সাশ্রয়ী দামে।</p>
-  </div>
+  <section class="p-10 text-center mt-10">
+    <h1 class="text-4xl font-bold text-blue-700">স্বাগতম Humaira Communications এ!</h1>
+    <p class="mt-4 text-gray-600">আমরা দিচ্ছি নিরবচ্ছিন্ন ইন্টারনেট পরিষেবা সাশ্রয়ী দামে।</p>
+  </section>
 
-  <!-- JS for flying birds -->
-  <script>
-    const sky = document.getElementById('sky');
-
-    function createBird() {
-      const bird = document.createElement('div');
-      bird.classList.add('bird');
-      bird.style.top = Math.random() * window.innerHeight + 'px';
-      bird.style.animationDuration = (10 + Math.random() * 10) + 's';
-      sky.appendChild(bird);
-
-      // remove after animation complete
-      setTimeout(() => {
-        sky.removeChild(bird);
-      }, 20000);
-    }
-
-    // create birds every 3 seconds
-    setInterval(createBird, 3000);
-    // create some initially
-    for (let i = 0; i < 5; i++) {
-      setTimeout(createBird, i * 1000);
-    }
-  </script>
 </body>
 </html>
